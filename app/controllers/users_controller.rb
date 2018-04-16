@@ -25,6 +25,11 @@ class UsersController < ApplicationController
     head :no_content
   end
 
+  # DELETE /users/:id
+  def destroy
+    @user.destroy
+    head :no_content
+  end
   private
 
   def user_params

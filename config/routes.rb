@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
     end
     resources :users
+    resources :user_participations
   end
 end
