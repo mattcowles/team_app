@@ -37,7 +37,7 @@ class UserParticipationsController < ApplicationController
   end
 
   def set_user_participation
-    @user_participation = UserParticipation.find(params[:user_participation_id])
+    @user_participation = UserParticipation.find(params[:id])
   end
 
 end
