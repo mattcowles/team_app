@@ -2,10 +2,25 @@ class UsersController < ApplicationController
 
   before_action :set_user, only: [:show, :update, :destroy]
 
+  def ng
+    @base_url = "/users/ng"
+    render :index
+  end
+
   # GET /users
   def index
+
     @users = User.all
-    json_response(@users)
+
+    respond_to do |format|
+      format.html {
+        redirect_to users_ng_path
+      }
+      format.json {
+        json_response(@users)
+      }
+    end
+
   end
 
   # POST /organizations

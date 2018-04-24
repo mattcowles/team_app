@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Team Manager</title>
+  <title>Upmetrics</title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
-  <%= javascript_pack_tag "application" %>
+  <%= javascript_pack_tag 'application' %>
   <%= stylesheet_pack_tag "application" %>
+  <% if @base_url %>
+    <base href="<%= @base_url %>">
+  <% end %>
 </head>
 
-<body>
-<h1>Rails:<%= Rails.env %></h1>
+<body class="container">
+<% if notice.present? %>
+  <aside class="alert alert-info">
+    <%= notice %>
+  </aside>
+<% end %>
+<% if alert.present? %>
+  <aside class="alert alert-danger">
+    <%= alert %>
+  </aside>
+<% end %>
 <%= yield %>
 </body>
 </html>

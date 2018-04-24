@@ -1,13 +1,13 @@
 <header>
   <h1>
-    Welcome to Team Manager!
+    Welcome to Upmetrics
   </h1>
-  <h2>
-    We're using Rails <%= Rails.version %> 
-  </h2>
+
 </header>
 <section>
-  <p>
-    Future home of the Team Manager Dashboard
-  </p>
+  <ul>
+    <li><%= link_to "My Profile", myprofile_ng_path %></li>
+    <li><%= link_to "Summary", summary_ng_path %></li>
+    <li><%= link_to "Users", users_ng_path %></li>
+  </ul>
 </section>
