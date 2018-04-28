@@ -28,13 +28,13 @@ if Team.all.count == 0
     print '.' if i % 1000 == 0
   end
 end
-
 $users = User.all
-Team.all.each do|t|
-  TeamUser.create!(team_id: t.id, user_id: $users[0].id)
-  TeamUser.create!(team_id: t.id, user_id: $users[1].id)
-  TeamUser.create!(team_id: t.id, user_id: $users[2].id)
-  TeamUser.create!(team_id: t.id, user_id: $users[3].id)
+if TeamUser.all.count == 0
+  $users.each do|u|
+    Team.all.each do|t|
+      TeamUser.create!(team_id: t.id, user_id: u.id)
+    end
+  end
 end
 
 if Sport.all.count == 0
@@ -58,8 +58,8 @@ end
 
 if UserParticipation.all.count == 0
   $users.each do|u|
-    UserParticipation.create!(user_id: u.id, sport_id: $sports[0].id, date_of: Date.today, duration_min: 60)
-    UserParticipation.create!(user_id: u.id, sport_id: $sports[1].id, date_of: Date.today, duration_min: 60)
-    UserParticipation.create!(user_id: u.id, sport_id: $sports[2].id, date_of: Date.today, duration_min: 60)
+    UserParticipation.create!(user_id: u.id, sport_id: $sports[0].id, date_of: Date.today, duration_min: rand(10..60)
+    UserParticipation.create!(user_id: u.id, sport_id: $sports[1].id, date_of: Date.today, duration_min: 10..60)
+    UserParticipation.create!(user_id: u.id, sport_id: $sports[2].id, date_of: Date.today, duration_min: 10..60)
   end
 end
