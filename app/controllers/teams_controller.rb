@@ -4,7 +4,13 @@ class TeamsController < ApplicationController
 
   # GET /organizations/:organization_id/teams
   def index
-    json_response(@organization.teams)
+    @organization_teams =  Team.get (params[:organization_id])
+    respond_to do |format|
+      format.json {
+        render json: { organization_teams: @organization_teams }
+      }
+    end
+
   end
 
   # GET /organizations/:organization_id/teams/:id

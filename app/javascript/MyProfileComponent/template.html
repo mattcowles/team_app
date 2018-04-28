@@ -1,0 +1,135 @@
+<!--
+ ! Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+-->
+<section class="my-profile col-md-6" *ngIf="user">
+<div class="panel panel-primary " *ngIf="user">
+  <header class="panel-heading">
+    <h1 class="h3">
+      My Profile
+    </h1>
+  </header>
+  <section class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+          {{user.first_name}}
+      </div>
+      <div class="col-md-4">
+        {{user.last_name}}
+      </div>
+      <div class="col-md-4">
+        {{user.email}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        Height: {{user.height}}
+      </div>
+      <div class="col-md-4">
+        Weight: {{user.weight}}
+      </div>
+    </div>
+  </section>
+</div>
+  <div class="pull-right">
+    <button class="btn btn-small btn-primary"
+            on-click="editUser(user)">
+      Edit User Profile
+    </button>
+  </div>
+</section>
+<section class="my-profile col-md-6" *ngIf="teams">
+  <div class="panel panel-primary " >
+    <header class="panel-heading">
+      <h1 class="h3">
+        My Teams
+      </h1>
+    </header>
+    <section class="panel-body">
+      <table class="table table-sm">
+        <thead>
+        <tr>
+          <th scope="col">Team Name</th>
+          <th scope="col">Members</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let team of teams">
+        <tr>
+          <td>{{team.name}}</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</section>
+<section class="my-profile col-md-6" >
+  <div class="panel panel-primary " >
+    <header class="panel-heading">
+      <h1 class="h3">
+        My Sports
+      </h1>
+    </header>
+    <section class="panel-body">
+      <table class="table table-sm">
+        <thead>
+        <tr>
+          <th scope="col">My Sports</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let sport of user_sports">
+        <tr>
+          <td>{{sport.name}}</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <div class="pull-right">
+    <button class="btn btn-small btn-primary"
+            on-click="editUser(user)">
+      Choose Sport
+    </button>
+  </div>
+
+</section>
+<section class="my-profile col-md-6" *ngIf="user_participations">
+  <div class="panel panel-primary " >
+    <header class="panel-heading">
+      <h1 class="h3">
+        My Participation
+      </h1>
+    </header>
+    <section class="panel-body">
+      <table class="table table-sm">
+        <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Sport</th>
+          <th scope="col">Duration</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let participation of user_participations">
+        <tr>
+          <td>{{participation.date_of}}</td>
+          <td>{{participation.name}}</td>
+          <td>{{participation.duration_min}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <div class="pull-right">
+    <button class="btn btn-small btn-primary"
+            on-click="editUser(user)">
+      Log Participation
+    </button>
+  </div>
+
+</section>
+

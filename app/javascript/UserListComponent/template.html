@@ -1,0 +1,29 @@
+<header>
+  <h1 class="h2">User List</h1>
+</header>
+<section class="user-list" *ngIf="users">
+  <header>
+    <h4 class="h4">Select My Profile or Public View</h4>
+  </header>
+  <ol class="list-group">
+    <li *ngFor="let user of users"
+      class="list-group-item clearfix">
+      <h2 class="h3">
+        {{user.first_name}} {{user.last_name}}
+        <small>{{user.email}}</small>
+      </h2>
+      <div class="pull-right">
+        <button class="btn btn-small btn-primary"
+                on-click="viewPublic(user)">
+          View Public
+        </button>
+      </div>
+      <div class="pull-right">
+        <button class="btn btn-small btn-primary"
+                on-click="viewMyProfile(user)">
+          View My Profile
+        </button>
+      </div>
+    </li>
+  </ol>
+</section>

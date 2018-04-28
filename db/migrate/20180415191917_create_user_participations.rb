@@ -1,7 +1,7 @@
-class CreateUserParticipations < ActiveRecord::Migration[5.1]
+class CreateUserParticipations < ActiveRecord::Migration[5.2]
   def change
     create_table :user_participations do |t|
-      t.references :team, foreign_key: true
+      t.references :sport, foreign_key: true
       t.references :user, foreign_key: true
       t.date :date_of
       t.integer :duration_min

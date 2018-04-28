@@ -1,0 +1,25 @@
+<section class="summary col-md-6" *ngIf="organization_teams">
+  <div class="panel panel-primary " >
+    <header class="panel-heading">
+      <h1 class="h3">
+        Teams
+      </h1>
+    </header>
+    <section class="panel-body">
+      <table class="table table-sm">
+        <thead>
+        <tr>
+          <th scope="col">Team Name</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let team of organization_teams">
+        <tr>
+          <td>{{team.name}}</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</section>
+

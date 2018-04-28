@@ -1,4 +1,5 @@
 class SummaryController < ApplicationController
+
   def ng
     @base_url = "/summary/ng"
     render :index
@@ -6,4 +7,5 @@ class SummaryController < ApplicationController
 
   def index
   end
+
 end

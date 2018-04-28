@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   before_action :set_user, only: [:show, :update, :destroy]
 
   def ng
@@ -17,13 +16,13 @@ class UsersController < ApplicationController
         redirect_to users_ng_path
       }
       format.json {
-        json_response(@users)
+        render json: { users: @users }
       }
     end
 
   end
 
-  # POST /organizations
+  # POST /users
   def create
     @user = User.create!(user_params)
     json_response(@user, :created)
@@ -31,7 +30,9 @@ class UsersController < ApplicationController
 
   # GET /users/:id
   def show
-    json_response(@user)
+    respond_to do |format|
+      format.json { render json: { user: @user } }
+    end
   end
 
   # PUT /users/:id
@@ -55,6 +56,4 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
-
-
 end

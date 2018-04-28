@@ -1,10 +1,15 @@
 class UserParticipationsController < ApplicationController
   before_action :set_user_participation, only: [:show, :update, :destroy]
 
-  # GET /user_participations
+  # GET /user_participations/:user_id/participations
   def index
-    @user_participations = UserParticipation.all
-    json_response(@user_participations)
+    @user_participations = UserParticipation.get (params[:user_id])
+
+    respond_to do |format|
+      format.json {
+        render json: { user_participations:@user_participations }
+      }
+    end
   end
 
   # GET /user_participations/:id
@@ -33,7 +38,7 @@ class UserParticipationsController < ApplicationController
   private
 
   def user_participation_params
-    params.permit(:date_of, :duration_min, :team_id, :user_id)
+    params.permit(:date_of, :duration_min, :sport_id, :user_id)
   end
 
   def set_user_participation
