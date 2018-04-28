@@ -9,9 +9,9 @@ default: &default
 
 development:
   <<: *default
-  database: shine_development
+  database: upm_development
 
 test:
   <<: *default
-  database: shine_test
+  database: upm_test
 

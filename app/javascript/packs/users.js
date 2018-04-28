@@ -13,7 +13,7 @@ import { UserDetailsComponent } from "UserDetailsComponent";
 
 
 var AppComponent = Component({
-    selector: "shine-users-app",
+    selector: "users-app",
     template: "<router-outlet></router-outlet>"
 }).Class({
     constructor: [

@@ -1,11 +1,3 @@
-#---
-# Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material,
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose.
-# Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
-#---
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -62,7 +54,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "shine_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "upmetrics_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.

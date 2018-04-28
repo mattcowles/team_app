@@ -26,7 +26,7 @@ task :sync_code => [:run_webpack_for_specs, :clean_named_screenshots,:spec, :kar
   fail "Can't find the code directory.  Expected it to be in #{code_dir}" unless File.exists?(code_dir)
   fail "Can't find the images directory.  Expected it to be in #{images_dir}" unless File.exists?(images_dir)
 
-  code_branch_dir = File.join(code_dir,current_branch,"shine")
+  code_branch_dir = File.join(code_dir,current_branch,"upmetrics")
   puts "Syncing code to #{code_branch_dir}"
   mkdir_p code_branch_dir
   puts `rsync --exclude public/packs --exclude .git --exclude .vimrc --exclude tmp --exclude log --exclude node_modules --exclude spec/screenshots -av . #{code_branch_dir}`
