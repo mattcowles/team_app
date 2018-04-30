@@ -29,3 +29,25 @@
     </div>
   </section>
 </div>
+<section class="summary col-md-6" >
+  <div class="panel panel-primary " >
+    <header class="panel-heading">
+      <h1 class="h3">
+        Participation
+      </h1>
+    </header>
+    <section class="panel-body">
+
+      <div style="display: block">
+        <canvas
+                baseChart
+                [chartType]="'bar'"
+                [data]="data"
+                [labels]="labels"
+                [colors]="colors">
+        </canvas>
+      </div>
+    </section>
+  </div>
+</section>
+

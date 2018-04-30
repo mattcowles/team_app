@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "users/ng/*angular_route", to: "users#ng"
   get "users/ng/:id/myprofile",                to: "users#ng"
   get "users/ng/:id/myprofile/*angular_route", to: "users#ng"
-
+  get "users/:id/participation/bydate",        to: "users#user_participations"
   resources :users, only: [ :index, :show, :update ]
   get "/organizations/:organization_id/teams/participation",   to: "teams#team_participation"
 

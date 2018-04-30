@@ -23,6 +23,7 @@ class TeamsController < ApplicationController
 
     end
   end
+
   # GET /organizations/:organization_id/teams/:id
   def show
     json_response(@team)

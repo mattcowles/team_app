@@ -22,6 +22,16 @@ class UsersController < ApplicationController
 
   end
 
+  # GET /users/:id/participation/bydate
+  def user_participations
+    @participation_bydate =  UserParticipation.user_participations (params[:id])
+    respond_to do |format|
+      format.json {
+        render json: { participation_bydate: @participation_bydate }
+      }
+    end
+  end
+
   # POST /users
   def create
     @user = User.create!(user_params)

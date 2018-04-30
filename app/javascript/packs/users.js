@@ -10,6 +10,7 @@ import { RouterModule           } from "@angular/router";
 import { UserListComponent  } from "UserListComponent";
 import { MyProfileComponent  } from "MyProfileComponent";
 import { UserDetailsComponent } from "UserDetailsComponent";
+import { ChartsModule           }   from 'ng2-charts';
 
 
 var AppComponent = Component({
@@ -43,6 +44,7 @@ var UserAppModule = NgModule({
         BrowserModule,
         FormsModule,
         HttpModule,
+        ChartsModule,
         routing
     ],
     declarations: [

@@ -18,7 +18,6 @@ var SummaryComponent = Component({
       this.http           = http;
       this.id             = null;
       this.organization_teams  = null;
-      this.labels = null;
       this.data = null;
       this.labels = null;
       this.team_participation = null;

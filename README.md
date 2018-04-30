@@ -20,9 +20,9 @@ Items TODO:
 
 Add editing of user profile, sports of interest, and participation log.
 
-Show per user participation chart.
-
 Hide non-public profile
+
+Fix user participation chart issue
 
 
 

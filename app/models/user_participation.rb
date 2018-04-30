@@ -8,4 +8,15 @@ class UserParticipation < ApplicationRecord
         .where(user_participations: { user_id:  user_id})
   end
 
+  def self.user_participations(user_id)
+
+    sql_str = "select up.user_id, "\
+              "sum(up.duration_min) total, date_of "\
+              " from user_participations up "\
+              " where user_id = #{user_id} "\
+              " group by user_id, date_of "
+    ActiveRecord::Base.connection.exec_query(sql_str).to_json
+
+  end
+
 end
