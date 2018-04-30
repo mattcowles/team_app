@@ -58,8 +58,8 @@ end
 
 if UserParticipation.all.count == 0
   $users.each do|u|
-    UserParticipation.create!(user_id: u.id, sport_id: $sports[0].id, date_of: Date.today, duration_min: rand(10..60)
-    UserParticipation.create!(user_id: u.id, sport_id: $sports[1].id, date_of: Date.today, duration_min: 10..60)
-    UserParticipation.create!(user_id: u.id, sport_id: $sports[2].id, date_of: Date.today, duration_min: 10..60)
+    UserParticipation.create!(user_id: u.id, sport_id: $sports[0].id, date_of: Date.today-rand(1..30), duration_min: rand(10..60))
+    UserParticipation.create!(user_id: u.id, sport_id: $sports[1].id, date_of: Date.today-rand(1..30), duration_min: rand(10..60))
+    UserParticipation.create!(user_id: u.id, sport_id: $sports[2].id, date_of: Date.today-rand(1..30), duration_min: rand(10..60))
   end
 end

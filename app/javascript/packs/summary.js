@@ -6,6 +6,7 @@ import { FormsModule            } from "@angular/forms";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { HttpModule             } from "@angular/http";
 import { RouterModule           } from "@angular/router";
+import { ChartsModule           }   from 'ng2-charts';
 
 import { SummaryComponent  } from "SummaryComponent";
 
@@ -32,6 +33,7 @@ var SummaryAppModule = NgModule({
         BrowserModule,
         FormsModule,
         HttpModule,
+        ChartsModule,
         routing
     ],
     declarations: [

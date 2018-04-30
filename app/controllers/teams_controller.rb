@@ -13,6 +13,16 @@ class TeamsController < ApplicationController
 
   end
 
+  # GET /organizations/:organization_id/teams/participation
+  def team_participation
+    @team_participation =  Team.team_participation (params[:organization_id])
+    respond_to do |format|
+      format.json {
+        render json: { team_participation: @team_participation }
+      }
+
+    end
+  end
   # GET /organizations/:organization_id/teams/:id
   def show
     json_response(@team)
