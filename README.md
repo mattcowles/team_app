@@ -19,7 +19,7 @@ In browser go localhost:5000/
 
 Items TODO:
 
-Add editing of user profile, sports of interest, and participation log.
+Add editting of sports of interest, and participation log.
 
 Hide non-public profile
 
