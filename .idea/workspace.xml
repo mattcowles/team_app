@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b716093f-e100-49a0-83ce-d133f42f4a22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/MyProfileComponent/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/MyProfileComponent/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/MyProfileComponent/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/MyProfileComponent/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/hello_angular/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/hello_angular/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/users.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -56,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/javascript/UserProfileFormComponent/index.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="630">
@@ -92,12 +86,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="165">
-                <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <first_editor relative-caret-position="360">
+                <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               </first_editor>
               <second_editor />
             </state>
@@ -654,12 +648,12 @@
       <workItem from="1524920570672" duration="286000" />
       <workItem from="1524926632711" duration="18916000" />
       <workItem from="1525116264823" duration="7217000" />
-      <workItem from="1525220734115" duration="12280000" />
+      <workItem from="1525220734115" duration="12454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115552000" />
+    <option name="totallyTimeSpent" value="115726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="831" extended-state="6" />
@@ -1030,16 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/UserProfileFormComponent/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -1047,6 +1031,16 @@
           <folding>
             <element signature="e#367#409#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="360">
+            <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
