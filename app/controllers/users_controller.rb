@@ -35,7 +35,11 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.create!(user_params)
-    json_response(@user, :created)
+    respond_to do |format|
+      format.json {
+        render json: { users: @users }
+      }
+    end
   end
 
   # GET /users/:id

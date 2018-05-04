@@ -3,6 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 import { Http }           from "@angular/http";
 import                         "rxjs/add/operator/map";
 import   template         from "./template.html";
+import { UserProfileFormComponent  } from "../UserProfileFormComponent";
 
 var MyProfileComponent = Component({
   selector: "myprofile",
@@ -11,7 +12,11 @@ var MyProfileComponent = Component({
   constructor: [
     ActivatedRoute,
     Http,
-    function(activatedRoute,http) {
+    UserProfileFormComponent,
+    function(activatedRoute,
+             http,
+             userProfileFormComponent
+    ) {
       this.activatedRoute = activatedRoute;
       this.http           = http;
       this.id             = null;
@@ -19,6 +24,8 @@ var MyProfileComponent = Component({
       this.teams          = null;
       this.user_sports    = null;
       this.user_participations = null;
+      this.userProfileFormComponent = userProfileFormComponent
+      this.userEdit = {};
 
     }
   ],
@@ -112,9 +119,38 @@ var MyProfileComponent = Component({
         }
         self.activatedRoute.params.subscribe(participationRouteSuccess,participationObservableFailed);
     },
-    editUser: function() {
+    editUser: function(user) {
+        var self = this;
+        this.display='block';
+        Object.assign(self.userEdit, self.user);
 
-    }
+    },
+    onCloseHandled: function() {
+        this.display='none';
+    },
+    onSubmit: function() {
+        var self = this;
+
+       this.display='none';
+        console.log(JSON.stringify(self.userEdit));
+
+        var observable = self.http.put(
+            "/users/" + self.userEdit.id,
+            self.userEdit);
+
+        var mappedObservable = observable.map(
+                function(response) {
+                    console.log(JSON.stringify(response));
+
+                    return response;
+                },
+            )
+
+        mappedObservable.subscribe(
+            function(response) { Object.assign(self.user, self.userEdit); },
+            function(response) { alert(response); },
+        );
+    },
 
 
 });

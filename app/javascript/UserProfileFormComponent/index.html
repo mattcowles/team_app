@@ -1,0 +1,48 @@
+<div class="container">
+    <div [hidden]="submitted">
+        <h1>User Profile</h1>
+        <form (ngSubmit)="onSubmit()" #userProfileForm="ngForm">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" class="form-control" id="first-name"
+                       required
+                       [(ngModel)]="first_name" name="first-name"
+                       #name="ngModel">
+                <div [hidden]="name.valid || name.pristine"
+                     class="alert alert-danger">
+                    First Name is required
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" class="form-control" id="last-name"
+                       required
+                       [(ngModel)]="last_name" name="last-name"
+                       #name="ngModel">
+                <div [hidden]="name.valid || name.pristine"
+                     class="alert alert-danger">
+                    Last Name is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email"
+                       [(ngModel)]="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="height">Height</label>
+                <input type="text" class="form-control" id="height"
+                       [(ngModel)]="height" name="height">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight</label>
+                <input type="text" class="form-control" id="weight"
+                       [(ngModel)]="weight" name="weight">
+            </div>
+
+            <button type="submit" class="btn btn-success" [disabled]="!userProfileForm.form.valid">Submit</button>
+        </form>
+    </div>
+
+</div>

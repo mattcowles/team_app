@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts'
+import { UserProfileFormComponent  } from "../../UserProfileFormComponent";
 
 import { AppComponent } from './app.component';
 
@@ -9,9 +10,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, UserProfileFormComponent
   ],
-  providers: [ChartsModule],
+  providers: [ChartsModule, UserProfileFormComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

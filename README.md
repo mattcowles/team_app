@@ -7,7 +7,7 @@ Install and setup Postgres
 Modify database.yml adding the username and password that setup in postgres
 
 cd to the repo and run the following commands:
-1) yarn
+1) yarn or npm install
 2) npm i webpack-dev-server
 3) npm i -i ng2-charts
 4) bundle install
